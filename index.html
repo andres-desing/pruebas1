@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <title>PRUEBAS SELECCION</title>
+</head>
+
+
+
+<body class="tamaño" onload="presentarUsuario()">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4 text-center py-5">
+        <strong>
+          <p>PAGINA WEB DE PRESENTACION A PRUEBA DE SELECCION DESARROLLO FRONTEND</p>
+        </strong>
+        <br> <br> <br>
+        <ul>
+          <li class="pb-2">Autor: Andres Mauricio Diaz de la Rue</li>
+          <li class="pb-2">Profesión:TECNOLOGO EN ANALISIS Y DESARROLLO DE SISTEMAS DE INFORMACION</li>
+          <li>Año:2020</li>
+          <br> <br> <br>
+          <Li>Funciones:  Comic Aleatorio </Li>
+          <li>Presione doble click en el boton Next cambia de Comic</li>
+          <li>Presinando F5 refrescara la pagina completa</li>
+          <LI>Permite que el usuario califique el comic en la escala de las estrellas</LI>
+          <li>Enlace directo con la pagina de MASIV seleccionando el icono</li>
+        </ul>
+
+        <h1 class="logo"><a href="https://www.masivian.com/"><img 
+              src="https://masiv.com/wp-content/uploads/2019/09/masiv-logo.png" alt="Masiv"></a></h1>
+      </div>
+
+      <div class="col-sm-4 text-center">
+        <div class="row">
+          <div class="display-3" id="contenedor"></div>
+          <p class="calificacion">
+            <input id="radio1" type="radio" class="radio" name="estrellas" value="EXCELENTE">
+            <label for="radio1">★</label>
+            <input id="radio2" type="radio" class="radio" name="estrellas" value="Bueno">
+            <label for="radio2">★</label>
+            <input id="radio3" type="radio" class="radio" name="estrellas" value="REGULAR">
+            <label for="radio3">★</label>
+            <input id="radio4" type="radio" class="radio" name="estrellas" value="MALO">
+            <label for="radio4">★</label>
+            <input id="radio5" type="radio" class="radio" name="estrellas" value="PESIMO">
+            <label for="radio5">★</label>
+          </p>
+          <div class="col-sm-4 py-3">
+            <div class="rw-ui-container"></div>
+            <button type="button" class="btn btn-success" onclick="presentarUsuario()">Next</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/pruebas.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-3.4.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function()
+		{
+		$(".radio").click(function () {	 
+			alert("SU CALIFICACION ES " + $('input:radio[name=estrellas]:checked').val());
+			});
+		 });
+</script>
+
+
+
+</html>
